@@ -15,6 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    perspective: 1000px;
 }
 
 section::before
@@ -44,13 +45,109 @@ section::after
     width:370px;
     position: relative;
     z-index: 3;
+    transform-style:preserve-3d ;
+    transition: 0.7s;
 }
 .card
 {
+    position: absolute;
     height: 100%;
     width: 100%;
+    padding: 25px;
     border-radius: 25px;
     background:rgb(255, 255, 255,0.1) ;
     box-shadow: 0 25px 30px black;
     backdrop-filter: blur(25px);
+    color: white;
+    backface-visibility: hidden;
+}
+.container .front_facing .logo
+{
+    height: 40px;
+    width: 60px;
+    margin-right: 5px;
+}
+.container .front_facing .mc
+{
+    font-size:15px;
+}
+.front_facing header
+{
+    display: flex;
+    justify-content: space-between;
+}
+.lo
+{
+    display: flex;
+    align-items: center;
+}
+.front_facing .card-details
+{
+   display: flex;
+   justify-content: space-between;  
+
+}
+.customer-no
+{
+    margin-top: 5px;
+}
+.cardnumber
+{
+    margin-top: 20px;
+}
+.customer-n
+{
+    margin-top: 6px;
+}
+.customer-info1
+{
+    margin-top: 55px;;
+}
+.customer-name
+{
+   margin-top: 13px;
+}
+.back_flipping
+{
+transform: rotateY(180deg);
+}
+.strip
+{
+    position:absolute;
+    height: 50px;
+    width:100%;
+    left: 0;
+    margin-top: 10px;
+    background: black;
+}
+
+.sign
+{
+    margin-top: 70px;
+    background:repeating-linear-gradient(#fff, #fff 3px,#efefef 0px,#efefef 9px);
+    height: 35px;
+    width: 85%;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.sign i
+{
+    font-size: 10px;
+    color: black;
+    margin-right: -30px;
+    padding: 4px 6px;
+    background-color:rgb(249, 246, 246);
+    border-radius: 4px;
+}
+.random
+{
+    font-size: 10px;
+    margin-top: 10px;
+
+}
+.container:hover
+{
+    transform: rotateY(180deg);
 }
